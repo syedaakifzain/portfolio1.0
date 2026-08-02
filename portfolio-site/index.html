@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>Syed Aakif Zain — UI/UX Designer & Creative Technologist</title>
+    <meta name="description" content="Syed Aakif Zain is a UI/UX Designer and Creative Technologist exploring the intersection of design, intelligent systems, and immersive digital experiences." />
+    <meta property="og:title" content="Syed Aakif Zain — UI/UX Designer & Creative Technologist" />
+    <meta property="og:description" content="I design experiences. I code them into reality." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/typography.css" />
+    <link rel="stylesheet" href="/src/styles/responsive.css" />
+  </head>
+  <body>
+
+    <!-- Loader overlay -->
+    <div id="loader" aria-live="polite" role="status">
+      <div class="loader-inner">
+        <div class="loader-name">SAZ</div>
+        <div class="loader-bar-track">
+          <div class="loader-bar-fill" id="loader-bar"></div>
+        </div>
+        <div class="loader-label" id="loader-label">INITIALISING</div>
+      </div>
+    </div>
+
+    <!-- Fixed 3D canvas -->
+    <canvas id="webgl-canvas" aria-hidden="true"></canvas>
+
+    <!-- Chapter index -->
+    <div id="chapter-indicator" aria-hidden="true">
+      <span id="chapter-index">01</span>
+      <span class="chapter-divider">/</span>
+      <span class="chapter-total">06</span>
+    </div>
+
+    <!-- Minimal navigation -->
+    <nav id="main-nav" aria-label="Portfolio navigation">
+      <div class="nav-monogram">SAZ</div>
+      <ul class="nav-links" role="list">
+        <li><a href="#about" data-nav="about">About</a></li>
+        <li><a href="#projects" data-nav="projects">Work</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="scene-overlay" aria-label="Hero">
+      <div class="hero-content">
+        <h1 class="hero-name" id="hero-name">SYED AAKIF ZAIN</h1>
+        <p class="hero-statement" id="hero-statement">I DESIGN. I BUILD. I EXPERIMENT.</p>
+        <p class="hero-descriptor" id="hero-descriptor">Creative Developer · UI/UX Designer · AI &amp; Security Explorer</p>
+      </div>
+      <div class="scroll-hint" id="scroll-hint" aria-label="Scroll to continue">
+        <div class="scroll-hint-line"></div>
+        <span class="scroll-hint-text">SCROLL</span>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="scene-overlay" aria-label="About">
+      <div class="about-content">
+        <h2 class="scene-statement" id="about-statement">I DON'T STAY IN ONE DIMENSION.</h2>
+        <p class="about-bio" id="about-bio">
+          I'm Aakif, a Computer Science and Design Engineering student exploring
+          the intersection of design, intelligent systems and immersive digital experiences.
+        </p>
+      </div>
+      <div class="domain-words" id="domain-words" aria-hidden="true">
+        <span class="domain-word dw-design" data-weight="primary">DESIGN</span>
+        <span class="domain-word dw-ai">AI</span>
+        <span class="domain-word dw-web">WEB</span>
+        <span class="domain-word dw-3d">3D</span>
+        <span class="domain-word dw-security">SECURITY</span>
+        <span class="domain-word dw-exp">EXPERIMENTATION</span>
+      </div>
+    </section>
+
+    <!-- ===== PHILOSOPHY ===== -->
+    <section id="philosophy" class="scene-overlay" aria-label="Design philosophy">
+      <div class="philosophy-content">
+        <h2 class="scene-statement" id="philosophy-statement">CHAOS IS JUST AN UNDESIGNED SYSTEM.</h2>
+        <p class="philosophy-body" id="philosophy-body">
+          I turn ideas, problems and experiments into digital experiences<br />
+          people can understand and interact with.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS (Spatial Draggable Grid) ===== -->
+    <section id="projects" class="scene-overlay scene-overlay--projects" aria-label="Selected projects">
+      <!-- Ambient cursor glow (desktop only) -->
+      <div class="project-glow" id="project-glow" aria-hidden="true"></div>
+
+      <!-- Section label -->
+      <div class="projects-heading">
+        <h2 class="scene-statement" id="projects-heading">SELECTED EXPERIMENTS</h2>
+      </div>
+
+      <!-- Draggable project world -->
+      <div class="project-canvas" id="project-canvas">
+        <div class="project-world" id="project-world">
+
+          <!-- Card 01: Quantum EEG Signal Classifier -->
+          <div class="project-card card--eeg" data-project="0" role="button" tabindex="0" aria-label="Quantum EEG Signal Classifier details">
+            <div class="card-image-wrapper">
+              <img src="/projects/quantum_eeg.png" alt="Quantum EEG Signal Classifier" class="card-image" loading="lazy" />
+              <div class="card-glow-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <span class="card-num">01</span>
+                <span class="card-status status-dev">In Development</span>
+              </div>
+              <h3 class="card-title">Quantum EEG Signal Classifier</h3>
+              <p class="card-desc">Hybrid quantum-classical ML pipeline for biomedical EEG classification using Qiskit and MNE.</p>
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">Qiskit</span>
+                <span class="card-tag">MNE</span>
+              </div>
+              <div class="card-actions">
+                <span class="card-action-btn card-action-btn--disabled">
+                  <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  Private
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 02: Face Recognition Attendance -->
+          <div class="project-card card--face" data-project="1" role="button" tabindex="0" aria-label="Face Recognition Attendance details">
+            <div class="card-image-wrapper">
+              <img src="/projects/face_recognition.png" alt="Face Recognition Attendance" class="card-image" loading="lazy" />
+              <div class="card-glow-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <span class="card-num">02</span>
+                <span class="card-status status-completed">Completed</span>
+              </div>
+              <h3 class="card-title">Face Recognition Attendance</h3>
+              <p class="card-desc">Real-time facial detection and 128D embedding matching attendance system with OpenPyXL data logging.</p>
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">dlib</span>
+                <span class="card-tag">OpenCV</span>
+              </div>
+              <div class="card-actions">
+                <span class="card-action-btn card-action-btn--disabled">
+                  <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  Private
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 03: CampusLink -->
+          <div class="project-card card--campus" data-project="2" role="button" tabindex="0" aria-label="CampusLink details">
+            <div class="card-image-wrapper">
+              <img src="/projects/campus_link.png" alt="CampusLink" class="card-image" loading="lazy" />
+              <div class="card-glow-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <span class="card-num">03</span>
+                <span class="card-status status-completed">Completed</span>
+              </div>
+              <h3 class="card-title">CampusLink</h3>
+              <p class="card-desc">Conversational LLM student advisor and glassmorphic campus placement analytics dashboard.</p>
+              <div class="card-tags">
+                <span class="card-tag">Next.js</span>
+                <span class="card-tag">OpenAI</span>
+                <span class="card-tag">FastAPI</span>
+              </div>
+              <div class="card-actions">
+                <span class="card-action-btn card-action-btn--disabled">
+                  <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  Private
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 04: Packet Analyzer -->
+          <div class="project-card card--packet" data-project="3" role="button" tabindex="0" aria-label="Packet Analyzer details">
+            <div class="card-image-wrapper">
+              <img src="/projects/packet_analyzer.png" alt="Packet Analyzer" class="card-image" loading="lazy" />
+              <div class="card-glow-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <span class="card-num">04</span>
+                <span class="card-status status-completed">Completed</span>
+              </div>
+              <h3 class="card-title">Packet Analyzer</h3>
+              <p class="card-desc">Deep packet inspection security engine executing regex-based signature payload matching and network graphs.</p>
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">Scapy</span>
+                <span class="card-tag">NetworkX</span>
+              </div>
+              <div class="card-actions">
+                <span class="card-action-btn card-action-btn--disabled">
+                  <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  Private
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 05: Portfolio -->
+          <div class="project-card card--portfolio" data-project="4" role="button" tabindex="0" aria-label="Portfolio details">
+            <div class="card-image-wrapper">
+              <img src="/projects/portfolio.png" alt="Portfolio" class="card-image" loading="lazy" />
+              <div class="card-glow-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <span class="card-num">05</span>
+                <span class="card-status status-completed">Completed</span>
+              </div>
+              <h3 class="card-title">Portfolio</h3>
+              <p class="card-desc">A premium cosmic developer portfolio using 14k particles morphing across WebGL rendering.</p>
+              <div class="card-tags">
+                <span class="card-tag">Three.js</span>
+                <span class="card-tag">GLSL</span>
+                <span class="card-tag">GSAP</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://github.com/syedaakifzain" class="card-action-btn card-action-btn--active" target="_blank" rel="noopener noreferrer" tabindex="0" onclick="event.stopPropagation()">
+                  <svg class="btn-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+                <a href="https://syedaakifzain.github.io" class="card-action-btn card-action-btn--active" target="_blank" rel="noopener noreferrer" tabindex="0" onclick="event.stopPropagation()">
+                  <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Drag hint -->
+      <div class="project-drag-hint" id="project-drag-hint" aria-hidden="true">DRAG TO EXPLORE</div>
+    </section>
+
+    <!-- ===== PROCESS ===== -->
+    <section id="process" class="scene-overlay" aria-label="Design process">
+      <div class="process-content">
+        <h2 class="process-opener" id="process-opener">I DON'T START WITH CODE.</h2>
+        <ol class="process-steps" id="process-steps" aria-label="My design process">
+          <li class="process-step" data-step="0"><span class="step-index">01</span><span class="step-label">QUESTION</span></li>
+          <li class="process-step" data-step="1"><span class="step-index">02</span><span class="step-label">EXPLORE</span></li>
+          <li class="process-step" data-step="2"><span class="step-index">03</span><span class="step-label">DESIGN</span></li>
+          <li class="process-step" data-step="3"><span class="step-index">04</span><span class="step-label">BUILD</span></li>
+          <li class="process-step" data-step="4"><span class="step-index">05</span><span class="step-label">BREAK</span></li>
+          <li class="process-step" data-step="5"><span class="step-index">06</span><span class="step-label">IMPROVE</span></li>
+        </ol>
+        <p class="process-repeat" id="process-repeat">REPEAT.</p>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="scene-overlay" aria-label="Skills and capabilities">
+      <div class="skills-content">
+        <h2 class="skills-primary" id="skills-primary">I DESIGN EXPERIENCES.</h2>
+        <p class="skills-secondary" id="skills-secondary">I CODE THEM INTO REALITY.</p>
+        <div class="skills-groups" id="skills-groups">
+          <div class="skill-group sg-design">
+            <h3 class="skill-group-label">DESIGN</h3>
+            <ul>
+              <li>Figma</li><li>UI/UX Design</li><li>Interaction Design</li>
+              <li>Responsive Design</li><li>Human-Computer Interaction</li>
+            </ul>
+          </div>
+          <div class="skill-group sg-creative">
+            <h3 class="skill-group-label">CREATIVE DESIGN</h3>
+            <ul>
+              <li>Spline</li><li>3D Web Design</li><li>Visual Storytelling</li>
+              <li>Prototyping</li><li>Design Systems</li>
+            </ul>
+          </div>
+          <div class="skill-group sg-dev">
+            <h3 class="skill-group-label">DEVELOPMENT</h3>
+            <ul>
+              <li>HTML</li><li>CSS</li><li>Python</li><li>Java</li><li>Streamlit</li>
+            </ul>
+          </div>
+          <div class="skill-group sg-ai">
+            <h3 class="skill-group-label">AI &amp; INTELLIGENCE</h3>
+            <ul>
+              <li>Machine Learning</li><li>Generative AI</li>
+              <li>Computer Vision</li><li>Quantum ML</li>
+            </ul>
+          </div>
+          <div class="skill-group sg-security">
+            <h3 class="skill-group-label">SECURITY &amp; TOOLS</h3>
+            <ul>
+              <li>Kali Linux</li><li>Burp Suite</li><li>Nmap</li>
+              <li>Wireshark</li><li>Git &amp; GitHub</li>
+            </ul>
+          </div>
+        </div>
+        <footer class="site-footer">
+          <p>© 2026 SYED AAKIF ZAIN</p>
+          <p>DESIGNED &amp; BUILT WITH CURIOSITY.</p>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Project Detail Overlay -->
+    <div id="project-overlay" class="project-overlay" role="dialog" aria-modal="true" aria-label="Project details" hidden>
+      <button class="overlay-close" id="overlay-close" aria-label="Close project details">✕</button>
+      <div class="overlay-inner" id="overlay-inner"></div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

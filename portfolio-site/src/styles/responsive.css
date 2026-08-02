@@ -1,0 +1,155 @@
+/* ============================================================
+   RESPONSIVE — Mobile-first media queries
+   ============================================================ */
+
+/* === Tablet & below === */
+@media (max-width: 768px) {
+
+  body {
+    min-height: 900vh; /* more scroll room on mobile for slower reveals */
+  }
+
+  #main-nav {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  /* Hero */
+  .hero-content {
+    padding: 0 1.5rem;
+  }
+
+  /* About */
+  .about-content {
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 8vh;
+    max-width: none;
+  }
+
+  /* Domain words – fewer visible, simplified positions */
+  .dw-design   { top: 12%; right: 4%; font-size: clamp(1.2rem, 6vw, 2rem); }
+  .dw-ai       { top: 28%; right: 4%; }
+  .dw-web      { top: 44%; right: 4%; }
+  .dw-3d       { display: none; }
+  .dw-security { display: none; }
+  .dw-exp      { display: none; }
+
+  /* Projects — Scroll-driven Editorial Gallery Responsive */
+  .project-world {
+    width: max-content;
+    height: 100%;
+    gap: 2.5rem;
+    padding: 0 4rem 0 3rem;
+  }
+
+  .project-card {
+    width: 280px;
+    --y-offset: 0px !important;
+  }
+
+  .projects-heading {
+    top: 1.25rem;
+    left: 1.5rem;
+  }
+
+  .project-drag-hint {
+    bottom: 1.5rem;
+  }
+
+  /* Philosophy */
+  .philosophy-content {
+    padding: 0 1.5rem;
+    margin-bottom: 8vh;
+  }
+
+  /* Process */
+  .process-content {
+    padding: 0 1.5rem;
+  }
+
+  /* Skills */
+  .skills-content {
+    padding: 0 1.5rem;
+  }
+
+  .skills-groups {
+    gap: 1.5rem;
+  }
+
+  /* Contact */
+  .contact-content {
+    padding: 0 1.5rem;
+  }
+
+  /* Showcase Overlay Responsive */
+  .overlay-inner {
+    width: 92%;
+    height: 85vh;
+    max-height: none;
+    border-radius: 12px;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+  }
+
+  .detail-visual {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .detail-info {
+    padding: 1.75rem 1.5rem 1.25rem;
+  }
+
+  .detail-tags-container {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .detail-scroll-area {
+    margin-bottom: 1.25rem;
+  }
+
+  #chapter-indicator {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+}
+
+/* === Mobile portrait === */
+@media (max-width: 480px) {
+  .nav-links {
+    display: none; /* collapsed on very small screens */
+  }
+
+  .pg-info {
+    padding: 1rem;
+  }
+
+  .pg-num {
+    font-size: 2rem;
+  }
+}
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-hint-line {
+    animation: none;
+    opacity: 0.3;
+    height: 32px;
+  }
+}
