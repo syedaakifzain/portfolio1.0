@@ -76,9 +76,9 @@ export class ProjectCanvas {
     if (!this._world) return
 
     // ── 1. Calculate sliding horizontal translation ────────────────────────
-    // Projects chapter start = 0.420, end = 0.570 (from ChapterMap.js)
-    const start = 0.420
-    const end = 0.570
+    // Projects chapter start = 0.500, end = 0.666 (from ChapterMap.js)
+    const start = 0.500
+    const end = 0.666
     
     // Calculate normalized progress within PROJECTS chapter [0, 1]
     let sp = 0

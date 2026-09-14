@@ -1,0 +1,45 @@
+diff --git a/portfolio-site/src/styles/global.css b/portfolio-site/src/styles/global.css
+index 4d51f01..0e15b76 100644
+--- a/portfolio-site/src/styles/global.css
++++ b/portfolio-site/src/styles/global.css
+@@ -872,13 +872,23 @@ body {
+   opacity: 1;
+ }
+ 
+-/* ── Skills ── */
++/* ── Skills — section override: align from top to prevent overflow clipping ── */
++#skills.scene-overlay {
++  align-items: flex-start;
++  justify-content: flex-start;
++  overflow: hidden;
++}
++
+ .skills-content {
+   display: flex;
+   flex-direction: column;
+-  gap: 2rem;
+-  padding: 0 6vw;
+-  max-width: 900px;
++  gap: clamp(1rem, 2vh, 2rem);
++  padding: clamp(5rem, 12vh, 9rem) 6vw clamp(2rem, 5vh, 4rem);
++  max-width: 960px;
++  width: 100%;
++  max-height: 100vh;
++  overflow: hidden;
++  box-sizing: border-box;
+ }
+ 
+ .skills-primary {
+@@ -916,8 +926,10 @@ body {
+ .skills-groups {
+   display: flex;
+   flex-wrap: wrap;
+-  gap: 2rem 3rem;
+-  margin-top: 1rem;
++  gap: clamp(0.75rem, 1.5vh, 1.5rem) clamp(1.5rem, 3vw, 3rem);
++  margin-top: 0;
++  flex: 1;
++  align-content: flex-start;
+ }
+ 
+ .skill-group {

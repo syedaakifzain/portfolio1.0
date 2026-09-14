@@ -19,8 +19,8 @@ import { CHAPTERS } from '../timeline/ChapterMap.js'
 
 // Visibility window: a chapter's DOM starts appearing this far BEFORE its start
 // and disappears this far AFTER its end
-const ENTER_BEFORE  = -0.02   // show DOM content 1.2% before chapter starts
-const EXIT_AFTER    = -0.02   // hide DOM content 1.2% after chapter ends
+const ENTER_BEFORE  = -0.02   // show DOM content 2% AFTER chapter starts (prevents overlap)
+const EXIT_AFTER    = -0.02   // hide DOM content 2% BEFORE chapter ends (prevents overlap)
 
 // Per-chapter DOM elements to reveal when chapter becomes active
 const CHAPTER_REVEAL_MAP = {

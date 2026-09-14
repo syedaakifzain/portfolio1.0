@@ -14,6 +14,14 @@ if (prefersReducedMotion) {
   document.documentElement.dataset.reducedMotion = 'true'
 }
 
+// ── Always start at the top — disable browser scroll restoration ──────────────
+// Without this the browser restores the previous scroll position on reload,
+// which immediately jumps the experience to a mid-point chapter.
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual'
+}
+window.scrollTo(0, 0)
+
 // ── Bootstrap the ONE Experience ─────────────────────────────────────────────
 const canvas = document.getElementById('webgl-canvas')
 const exp    = new Experience(canvas)

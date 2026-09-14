@@ -1,0 +1,14 @@
+diff --git a/portfolio-site/src/styles/responsive.css b/portfolio-site/src/styles/responsive.css
+index 792a8df..faa0e81 100644
+--- a/portfolio-site/src/styles/responsive.css
++++ b/portfolio-site/src/styles/responsive.css
+@@ -73,7 +73,8 @@
+ 
+   /* Skills */
+   .skills-content {
+-    padding: 0 1.5rem;
++    padding: clamp(4rem, 10vh, 7rem) 1.5rem clamp(2rem, 4vh, 3rem);
++    gap: clamp(0.75rem, 1.5vh, 1.25rem);
+   }
+ 
+   .skills-groups {
