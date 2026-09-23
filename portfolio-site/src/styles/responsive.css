@@ -43,7 +43,7 @@
     width: max-content;
     height: 100%;
     gap: 2.5rem;
-    padding: 0 4rem 0 3rem;
+    padding: 6.5rem 4rem 2.5rem 3rem;
   }
 
   .project-card {
@@ -52,7 +52,7 @@
   }
 
   .projects-heading {
-    top: 1.25rem;
+    top: 4.5rem;
     left: 1.5rem;
   }
 

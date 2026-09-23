@@ -7,28 +7,10 @@
 const PROJECT_DATA = [
   {
     index: '01',
-    title: 'Quantum EEG Signal Classifier',
-    tags: 'QUANTUM ML · EEG · SIGNAL PROCESSING',
-    status: 'In Development',
-    image: '/projects/quantum_eeg.png',
-    overview: 'A hybrid quantum-classical machine learning pipeline designed for biomedical EEG signal classification. It processes raw neural inputs and maps classical data to quantum states for high-dimensional feature analysis.',
-    features: [
-      'Raw EEG preprocessing via MNE-Python (0.5–40 Hz band-pass filtering, epoch segmentation)',
-      'Advanced feature extraction using wavelet transform, Shannon entropy, and Power Spectral Density',
-      'Quantum variational circuit design (VQC) using Qiskit with feature map customization',
-      'Comparative benchmarking against classical SVM and Random Forest models'
-    ],
-    challenges: 'Mapping high-dimensional classical EEG features onto a limited number of qubits (quantum states) without losing critical data variance, and mitigating quantum noise during simulation.',
-    learned: 'Acquired a strong foundation in Quantum Information Theory, learned to construct variational circuits in Qiskit, and optimized time-series feature selection for quantum kernels.',
-    github: null,
-    liveDemo: null
-  },
-  {
-    index: '02',
     title: 'Face Recognition Attendance',
     tags: 'COMPUTER VISION · PYTHON · AUTOMATION',
     status: 'Completed',
-    image: '/projects/face_recognition.png',
+    image: '/projects/Face_r.jpg',
     overview: 'An automated attendance logging system that uses real-time computer vision to detect, track, and recognize student faces in a classroom setting, removing manual logs entirely.',
     features: [
       'Real-time live video capture and face detection utilizing dlib\'s HOG and CNN models',
@@ -42,29 +24,29 @@ const PROJECT_DATA = [
     liveDemo: null
   },
   {
-    index: '03',
-    title: 'CampusLink',
-    tags: 'AI · PRODUCT DESIGN · STUDENT EXPERIENCE',
-    status: 'Completed',
-    image: '/projects/campus_link.png',
-    overview: 'A conversational AI-driven student advisor platform that synthesizes university analytics, placement trends, and personal profiles to deliver tailored academic and career roadmap guidance.',
+    index: '02',
+    title: 'Quantum EEG Signal Classifier',
+    tags: 'QUANTUM ML · EEG · SIGNAL PROCESSING',
+    status: 'In Development',
+    image: '/projects/Qeez.jpg',
+    overview: 'A hybrid quantum-classical machine learning pipeline designed for biomedical EEG signal classification. It processes raw neural inputs and maps classical data to quantum states for high-dimensional feature analysis.',
     features: [
-      'Context-aware LLM advisory interface featuring intelligent prompt-guided mentorship',
-      'Analytics dashboard tracking student placements, historical hiring trends, and skill requirements',
-      'Interactive skill gap analysis tool generating personalized, step-by-step roadmaps',
-      'Responsive, glassmorphic student web portal interface'
+      'Raw EEG preprocessing via MNE-Python (0.5–40 Hz band-pass filtering, epoch segmentation)',
+      'Advanced feature extraction using wavelet transform, Shannon entropy, and Power Spectral Density',
+      'Quantum variational circuit design (VQC) using Qiskit with feature map customization',
+      'Comparative benchmarking against classical SVM and Random Forest models'
     ],
-    challenges: 'Structuring complex, multi-year academic profiles into efficient LLM prompt contexts without exceeding token limits or triggering model hallucinations.',
-    learned: 'Mastered prompt engineering patterns, structured state management in React, and integrated third-party AI APIs with robust fallback and error handling.',
+    challenges: 'Mapping high-dimensional classical EEG features onto a limited number of qubits (quantum states) without losing critical data variance, and mitigating quantum noise during simulation.',
+    learned: 'Acquired a strong foundation in Quantum Information Theory, learned to construct variational circuits in Qiskit, and optimized time-series feature selection for quantum kernels.',
     github: null,
     liveDemo: null
   },
   {
-    index: '04',
+    index: '03',
     title: 'Packet Analyzer',
     tags: 'CYBERSECURITY · NETWORKING · TRAFFIC ANALYSIS',
     status: 'Completed',
-    image: '/projects/packet_analyzer.png',
+    image: '/projects/dpi.jpg',
     overview: 'A deep packet inspection (DPI) security engine designed to intercept and parse network traffic payloads, applying signature-based and heuristic analysis to identify threat anomalies in real-time.',
     features: [
       'Raw packet capturing and layer-by-layer protocol dissection across TCP/IP stack',
@@ -74,6 +56,24 @@ const PROJECT_DATA = [
     ],
     challenges: 'Developing highly optimized, multi-threaded buffers to analyze high-throughput packet streams without dropping packets or exhausting local system memory.',
     learned: 'Deepened my understanding of low-level networking, threat signature design, packet capturing libraries, and concurrent programming in Python.',
+    github: null,
+    liveDemo: null
+  },
+  {
+    index: '04',
+    title: 'Red Team Automation Platform',
+    tags: 'CYBERSECURITY · AUTOMATION · RECON',
+    status: 'In Progress',
+    image: '/projects/RedT.jpg',
+    overview: 'A security automation platform engineered for authorized reconnaissance, active network scanning, service enumeration, vulnerability assessment, and centralized security posture reporting.',
+    features: [
+      'Automated multi-stage reconnaissance workflows integrating Nmap and custom script engines',
+      'Target network asset discovery, open port detection, and live service fingerprinting',
+      'Vulnerability scanning and risk scoring pipeline with modular assessment plugins',
+      'Interactive centralized web dashboard built with Python and Flask for real-time reporting'
+    ],
+    challenges: 'Coordinating high-concurrency network tasks without triggering rate limits or false positives, and cleanly normalizing varied scan outputs into structured vulnerability schemas.',
+    learned: 'Gained advanced expertise in offensive security methodologies, network scanning internals, asynchronous task orchestration, and modular security dashboard architecture.',
     github: null,
     liveDemo: null
   },
@@ -99,9 +99,9 @@ const PROJECT_DATA = [
 
 export class ProjectOverlay {
   constructor() {
-    this._overlay   = document.getElementById('project-overlay')
-    this._inner     = document.getElementById('overlay-inner')
-    this._closeBtn  = document.getElementById('overlay-close')
+    this._overlay = document.getElementById('project-overlay')
+    this._inner = document.getElementById('overlay-inner')
+    this._closeBtn = document.getElementById('overlay-close')
     this._projectCanvas = null  // set externally for drag-gating
 
     if (!this._overlay) return
