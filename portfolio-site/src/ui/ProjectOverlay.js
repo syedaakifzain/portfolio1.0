@@ -56,7 +56,7 @@ const PROJECT_DATA = [
     ],
     challenges: 'Developing highly optimized, multi-threaded buffers to analyze high-throughput packet streams without dropping packets or exhausting local system memory.',
     learned: 'Deepened my understanding of low-level networking, threat signature design, packet capturing libraries, and concurrent programming in Python.',
-    github: null,
+    github: 'https://github.com/syedaakifzain/DPI-Based-Real-Time-Malicious-Website-Blocking-System.git',
     liveDemo: null
   },
   {
@@ -74,7 +74,7 @@ const PROJECT_DATA = [
     ],
     challenges: 'Coordinating high-concurrency network tasks without triggering rate limits or false positives, and cleanly normalizing varied scan outputs into structured vulnerability schemas.',
     learned: 'Gained advanced expertise in offensive security methodologies, network scanning internals, asynchronous task orchestration, and modular security dashboard architecture.',
-    github: null,
+    github: 'https://github.com/syedaakifzain/Red-team-automation-platform.git',
     liveDemo: null
   },
   {
