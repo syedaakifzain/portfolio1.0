@@ -79,6 +79,24 @@ const PROJECT_DATA = [
   },
   {
     index: '05',
+    title: 'VetPro Hub',
+    tags: 'WEB DEV · HEALTHCARE · UI/UX',
+    status: 'Completed',
+    image: '/projects/vet2.jpg',
+    overview: 'A web-based veterinary clinic and pet management platform designed for organizing pet profiles, medical history, vaccination records, treatment plans, and appointment workflows.',
+    features: [
+      'Comprehensive pet health record management and digital medical charts',
+      'Treatment and vaccination schedule tracking with automated reminders',
+      'Veterinary service catalog and consultation request interface',
+      'Responsive, accessible, and intuitive front-end architecture'
+    ],
+    challenges: 'Designing a clean, user-friendly interface that efficiently handles complex pet medical histories and multi-pet household profiles across various devices.',
+    learned: 'Strengthened core front-end engineering fundamentals, structured DOM manipulation, responsive UI patterns, and accessibility best practices.',
+    github: null,
+    liveDemo: null
+  },
+  {
+    index: '06',
     title: 'Portfolio',
     tags: 'CREATIVE DEV · WEBGL · THREE.JS',
     status: 'Completed',

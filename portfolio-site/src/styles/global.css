@@ -776,6 +776,12 @@ body {
   .card--redteam .card-image {
     object-position: center 30%;
   }
+  .card--vetpro {
+    --y-offset: 0px;
+  }
+  .card--vetpro .card-image {
+    object-position: center 25%;
+  }
   .card--portfolio {
     --y-offset: 0px;
   }
