@@ -20,7 +20,7 @@ const PROJECT_DATA = [
     ],
     challenges: 'Ensuring robust recognition under varying ambient lighting conditions, camera angles, and partial face occlusions (like glasses or masks) while maintaining a high frame rate.',
     learned: 'Gained hands-on experience with facial embedding spaces, deep learning-based object detection pipelines, and optimized real-time visual streams in Python.',
-    github: null,
+    github: 'https://github.com/syedaakifzain/face_recognition_attendance_system.git',
     liveDemo: null
   },
   {

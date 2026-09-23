@@ -1220,7 +1220,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 3.5rem 3rem 2.5rem;
+  padding: 2.25rem 2.75rem 2rem;
   overflow: hidden;
 }
 
@@ -1228,12 +1228,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .detail-num {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.2);
   letter-spacing: 0.05em;
@@ -1249,7 +1249,8 @@ body {
   font-weight: 500;
 }
 
-.detail-status--in-development {
+.detail-status--in-development,
+.detail-status--in-progress {
   color: #ffb450;
   background: rgba(255, 180, 80, 0.08);
   border: 1px solid rgba(255, 180, 80, 0.15);
@@ -1263,11 +1264,11 @@ body {
 
 .detail-title {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--color-text);
-  line-height: 1.2;
+  line-height: 1.3;
   margin-bottom: 0.5rem;
 }
 
@@ -1275,9 +1276,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  padding-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
 }
 
 .detail-tag {
@@ -1294,7 +1295,7 @@ body {
   flex-grow: 1;
   overflow-y: auto;
   padding-right: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 /* Custom scrollbar for details */
@@ -1313,7 +1314,7 @@ body {
 }
 
 .detail-section {
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .detail-section:last-child {
