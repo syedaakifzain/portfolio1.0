@@ -64,7 +64,7 @@ const PROJECT_DATA = [
     title: 'Red Team Automation Platform',
     tags: 'CYBERSECURITY · AUTOMATION · RECON',
     status: 'In Progress',
-    image: '/projects/RedT.jpg',
+    image: '/projects/RedTeam.jpg',
     overview: 'A security automation platform engineered for authorized reconnaissance, active network scanning, service enumeration, vulnerability assessment, and centralized security posture reporting.',
     features: [
       'Automated multi-stage reconnaissance workflows integrating Nmap and custom script engines',

@@ -547,7 +547,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  width: clamp(290px, 22vw, 340px);
+  width: 320px;
   background: rgba(10, 10, 10, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
@@ -750,7 +750,7 @@ body {
 /* Card sizes and positions on desktop (default) */
 @media (min-width: 769px) {
   .project-card {
-    width: clamp(290px, 22vw, 340px);
+    width: 320px;
   }
   .card--face {
     --y-offset: 0px;
@@ -774,7 +774,7 @@ body {
     --y-offset: 0px;
   }
   .card--redteam .card-image {
-    object-position: center center;
+    object-position: center 30%;
   }
   .card--portfolio {
     --y-offset: 0px;
