@@ -5,24 +5,24 @@
 
 export class ProjectCanvas {
   constructor() {
-    this._canvas   = document.getElementById('project-canvas')
-    this._world    = document.getElementById('project-world')
-    this._glow     = document.getElementById('project-glow')
+    this._canvas = document.getElementById('project-canvas')
+    this._world = document.getElementById('project-world')
+    this._glow = document.getElementById('project-glow')
 
     if (!this._canvas || !this._world) return
 
     // ── State ──────────────────────────────────────────────────────────────
-    this._active       = false
-    this._offsetX      = 0
+    this._active = false
+    this._offsetX = 0
     this._targetOffsetX = 0
-    this._maxScrollX   = 0
+    this._maxScrollX = 0
 
     // ── Glow state ─────────────────────────────────────────────────────────
-    this._glowX        = 0
-    this._glowY        = 0
-    this._targetGlowX  = 0
-    this._targetGlowY  = 0
-    this._isTouch      = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+    this._glowX = 0
+    this._glowY = 0
+    this._targetGlowX = 0
+    this._targetGlowY = 0
+    this._isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
 
     this._computeBounds()
 
@@ -79,12 +79,20 @@ export class ProjectCanvas {
     // Projects chapter start = 0.500, end = 0.666 (from ChapterMap.js)
     const start = 0.500
     const end = 0.666
-    
-    // Calculate normalized progress within PROJECTS chapter [0, 1]
+
+    // Hold zone: first 25% of the chapter scroll is a "dwell" period where
+    // the gallery stays still so the user can see the first project.
+    // Last 25% is also a dwell so the last project stays visible.
+    const holdFraction = 0.15
+    const chapterLen = end - start
+    const slideStart = start + chapterLen * holdFraction       // ~0.5415
+    const slideEnd = end - chapterLen * holdFraction       // ~0.6245
+
+    // Calculate normalized progress within the sliding window [0, 1]
     let sp = 0
-    if (p > start && p < end) {
-      sp = (p - start) / (end - start)
-    } else if (p >= end) {
+    if (p > slideStart && p < slideEnd) {
+      sp = (p - slideStart) / (slideEnd - slideStart)
+    } else if (p >= slideEnd) {
       sp = 1.0
     }
 
